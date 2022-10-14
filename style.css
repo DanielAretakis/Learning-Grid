@@ -64,22 +64,18 @@ main{
 
 main div:nth-child(1){
   animation: downtop .7s .4s backwards;
-  grid-area: A;
 }
 
 main div:nth-child(2){
   animation: downtop .7s .6s backwards;
-  grid-area: B;
 }
 
 main div:nth-child(3){
   animation: downtop .7s .8s backwards;
-  grid-area: C;
 }
 
 main div:nth-child(4){
   animation: downtop .7s 1s backwards;
-  grid-area: D;
 }
 
 img:hover{
@@ -142,21 +138,35 @@ img:hover{
   }
 }
 
+
+@media (min-width: 930px){
+  main{
+    grid-template-areas: "A B B"
+    "C C D";
+  }
+  
+  main div:nth-child(1){
+    grid-area: A;
+  }
+  
+  main div:nth-child(2){
+    grid-area: B;
+  }
+  
+  main div:nth-child(3){
+    grid-area: C;
+  }
+  
+  main div:nth-child(4){
+    grid-area: D;
+  }
+}
+
 @media (min-width: 700px){
-
-  .card{
-    max-width: 117rem;
-  }
-
-  .card h2{
-    left: 6rem;
-  }
-
   main{
     max-width: 117rem;
     padding: 0 3rem;
 
-    grid-template-areas: "A B B"
-    "C C D";
+    grid-template-columns: 1fr 1fr;
   }
 }
