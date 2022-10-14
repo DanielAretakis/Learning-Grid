@@ -1,0 +1,162 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --text-font: 'Epilogue', sans-serif;
+
+  --hue: 250;
+  --bg-primary: hsl(var(--hue), 22%, 20%);
+  --fc-primary: hsl(var(--hue), 50%, 80%);
+  --fc-secondary: hsl(var(--hue)  , 100%, 11%);
+
+  font-size: 62.5%;
+  --fs-body: 1.6rem;
+}
+
+body{
+  background-color: var(--bg-primary);
+  color: white;
+  margin: 10.6rem 0;
+}
+
+header{
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+header p{
+  animation: topdown .7s;
+}
+
+header h1{
+  animation: topdown .7s .2s backwards;
+}
+
+header p{
+  color: var(--fc-primary);
+  font: 400 var(--fs-body) var(--text-font);
+  line-height: 3.2rem;
+  letter-spacing: .3rem;
+
+  margin-bottom: 1.7rem;
+}
+
+header h1{
+  font: 800 5.6rem var(--text-font);
+  line-height: 6.4rem;
+  letter-spacing: -.1rem;
+}
+
+main{
+  display: grid;
+  max-width: 33rem;
+  margin: auto;
+  gap: 3.2rem;
+
+}
+
+.card{
+  position: relative;
+}
+
+main div:nth-child(1){
+  animation: downtop .7s .4s backwards;
+  grid-area: A;
+}
+
+main div:nth-child(2){
+  animation: downtop .7s .6s backwards;
+  grid-area: B;
+}
+
+main div:nth-child(3){
+  animation: downtop .7s .8s backwards;
+  grid-area: C;
+}
+
+main div:nth-child(4){
+  animation: downtop .7s 1s backwards;
+  grid-area: D;
+}
+
+img:hover{
+  transform: scale(1.05);
+}
+
+.card img{
+  width: 100%;
+  height: 41.6rem;
+  border-radius: .6rem;
+  object-fit: cover;
+  transition: .3s;
+}
+
+.card h2{
+  display: grid;
+  font: 800 4rem var(--text-font);
+  line-height: 4.8rem;
+  position: absolute;
+  z-index: 1;
+  bottom: 5rem;
+  left: 3rem;
+  gap: 2.3rem;
+}
+
+.card span{
+  background-color: white;
+  color: #090039;
+  font: 400 var(--fs-body) var(--text-font);
+  line-height: 3.2rem;
+  padding: 0 1.5rem;
+  border-radius: 2rem;
+  height: 3.8rem;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+}
+
+@keyframes topdown{
+  0%{
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop{
+  0%{
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 700px){
+
+  .card{
+    max-width: 117rem;
+  }
+
+  .card h2{
+    left: 6rem;
+  }
+
+  main{
+    max-width: 117rem;
+    padding: 0 3rem;
+
+    grid-template-areas: "A B B"
+    "C C D";
+  }
+}
