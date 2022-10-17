@@ -138,9 +138,18 @@ img:hover{
   }
 }
 
+@media (min-width: 700px){
+  main{
+    max-width: 117rem;
+    padding: 0 3rem;
+
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 @media (min-width: 930px){
   main{
+    grid-template-columns: none;
     grid-template-areas: "A B B"
     "C C D";
   }
@@ -159,12 +168,5 @@ img:hover{
   
   main div:nth-child(4){
     grid-area: D;
-  }
-}
-
-@media (min-width: 700px){
-  main{
-    max-width: 117rem;
-    padding: 0 3rem;
   }
 }
