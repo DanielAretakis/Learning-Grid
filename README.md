@@ -2,11 +2,17 @@
 
 > Projeto 05 criado no programa Explorer da RocketSeat
 
-Nesse projeto aprendemos como criar variáveis, uma nova maneira de escolher cores(hsl), a tag transform para dar destaques a certos elementos na página, à criar animações com o css
+Nesse projeto aprendemos como criar variáveis, uma nova maneira de escolher cores(hsl), a tag transform para dar destaques a certos elementos na página, à criar animações e aplicar filtros com o css, aprofundamos o grid utilizando templates e também como usar a função clamp()
 
-![preview](.github/PreviewMobile.png)
 
-![preview](.github/PreviewDesktop.png)
+>Desktop
+![preview](.github/Preview_big.png)
+
+>Tablet/iPad
+![preview](.github/Preview_medium.png)
+
+>Phones/Small devices
+![preview](.github/Preview_small.png)
 
 ## Tecnologias
 HTML

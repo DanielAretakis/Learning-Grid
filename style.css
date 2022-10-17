@@ -52,7 +52,8 @@ header h1{
 
 main{
   display: grid;
-  max-width: 33rem;
+  max-width: clamp(33rem, 30rem + 60vw, 117rem);
+  padding: 0 3rem;
   margin: 0 auto;
   gap: 3.2rem;
 
@@ -60,6 +61,7 @@ main{
 
 .card{
   position: relative;
+  transition: .3s;
 }
 
 main div:nth-child(1){
@@ -78,7 +80,7 @@ main div:nth-child(4){
   animation: downtop .7s 1s backwards;
 }
 
-img:hover{
+.card:hover{
   transform: scale(1.05);
 }
 
@@ -87,7 +89,7 @@ img:hover{
   height: 41.6rem;
   border-radius: .6rem;
   object-fit: cover;
-  transition: .3s;
+  filter: brightness(0.5);
 }
 
 .card h2{
@@ -140,9 +142,6 @@ img:hover{
 
 @media (min-width: 700px){
   main{
-    max-width: 117rem;
-    padding: 0 3rem;
-
     grid-template-columns: 1fr 1fr;
   }
 }
